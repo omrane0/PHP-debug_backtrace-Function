@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+// Two user-defined exception handler functions
+function myException1($exception) {
+    echo "[" . __FUNCTION__ . "]" . $exception->getMessage();
+}
+function myException2($exception) {
+    echo "[" . __FUNCTION__ . "]" . $exception->getMessage();
+}
+
+set_exception_handler("myException1");
+set_exception_handler("myException2");
+
+restore_exception_handler();
+
+// Throw exception
+throw new Exception("This triggers the first exception handler...");
+?>
+
+</body>
+</html>
+
+
+
+
+[myException1]This triggers the first exception handler...

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$usernum = 12;
+if ($usernum>10) {
+  trigger_error("Number cannot be larger than 10");
+}
+?>
+
+</body>
+</html>

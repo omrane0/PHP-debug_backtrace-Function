@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+// A user-defined error handler function
+function myErrorHandler($errno, $errstr, $errfile, $errline) {
+    echo "<b>Custom error:</b> [$errno] $errstr<br>";
+    echo " Error on line $errline in $errfile<br>";
+}
+
+// Set user-defined error handler function
+set_error_handler("myErrorHandler");
+
+$test=2;
+
+// Trigger error
+if ($test>1) {
+    trigger_error("A custom error has been triggered");
+}
+
+// Restore previous error handler
+restore_error_handler();
+
+// Trigger error again
+if ($test>1) {
+    trigger_error("A custom error has been triggered");
+}
+?>
+
+</body>
+</html>
+
+
+
+
+
+Custom error: [1024] A custom error has been triggered
+Error on line 19 in /home/Ir8QOO/prog.php

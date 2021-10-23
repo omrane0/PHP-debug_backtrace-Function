@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+function a($txt) {
+  b("Glenn");
+}
+function b($txt) {
+  c("Cleveland");
+}
+function c($txt) {
+  debug_print_backtrace();
+}
+a("Peter");
+?>
+
+</body>
+</html>
+
+
+
+
+#0 c(Cleveland) called at [/home/AE86oq/prog.php:10] #1 b(Glenn) called at [/home/AE86oq/prog.php:7] #2 a(Peter) called at [/home/AE86oq/prog.php:15]

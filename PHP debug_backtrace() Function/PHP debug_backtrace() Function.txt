@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+function a($txt) {
+  b("Glenn");
+}
+function b($txt) {
+  c("Cleveland");
+}
+function c($txt) {
+  var_dump(debug_backtrace());
+}
+a("Peter");
+?>
+
+</body>
+</html>
+
+
+
+
+
+array(3) { [0]=> array(4) { ["file"]=> string(21) "/home/Y2R6hD/prog.php" ["line"]=> int(10) ["function"]=> string(1) "c" ["args"]=> array(1) { [0]=> string(9) "Cleveland" } } [1]=> array(4) { ["file"]=> string(21) "/home/Y2R6hD/prog.php" ["line"]=> int(7) ["function"]=> string(1) "b" ["args"]=> array(1) { [0]=> string(5) "Glenn" } } [2]=> array(4) { ["file"]=> string(21) "/home/Y2R6hD/prog.php" ["line"]=> int(15) ["function"]=> string(1) "a" ["args"]=> array(1) { [0]=> string(5) "Peter" } } }

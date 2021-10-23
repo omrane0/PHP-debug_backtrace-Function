@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+echo $test;
+print_r(error_get_last());
+?>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+echo $test;
+print_r(error_get_last());
+?>
+
+</body>
+</html>
